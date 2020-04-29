@@ -551,7 +551,7 @@ export const spec = {
       data['us_privacy'] = encodeURIComponent(bidderRequest.uspConsent);
     }
 
-    // visitor properties
+    // visitor properties // check and log message if bad input
     const visitorData = Object.assign({}, params.visitor, config.getConfig('fpd.user'));
     Object.keys(visitorData).forEach((key) => {
       if (visitorData[key] != null && key !== 'keywords') {
