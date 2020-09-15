@@ -25,7 +25,7 @@ export const intentIqIdSubmodule = {
    * @returns {{intentIqId:string}}
    */
   decode(value) {
-    return (value && typeof value['ctrid'] === 'string') ? { 'intentIqId': value['ctrid'] } : undefined;
+    return (value != undefined && value != '') ? { 'intentIqId': value } : undefined;
   },
   /**
    * performs action to obtain id and return a value in the callback's response argument
